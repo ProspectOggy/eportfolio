@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name | ePortfolio</title>
+    <meta
+      name="description"
+      content="Professional ePortfolio showcasing skills, experience, and project artefacts."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav container">
+        <a class="logo" href="#top">Your Name</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#artefacts">Artefacts</a>
+          <a href="#contact">Contact</a>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            Dark mode
+          </button>
+        </div>
+      </nav>
+
+      <section class="hero-content container" id="top">
+        <p class="eyebrow">Year 3 Student ePortfolio</p>
+        <h1>Building practical project and teamwork capability</h1>
+        <p class="lead">
+          This ePortfolio presents my professional profile and selected artefacts
+          that demonstrate my communication, project planning, and problem-solving
+          skills.
+        </p>
+        <a class="button" href="#artefacts">View Artefacts</a>
+      </section>
+    </header>
+
+    <main>
+      <section class="section container" id="about">
+        <h2>About Me</h2>
+        <p>
+          I am a Year 3 student focused on developing strong project delivery,
+          stakeholder communication, and analytical skills. I enjoy working in
+          teams to plan, execute, and refine solutions that are practical and
+          evidence-based.
+        </p>
+        <p>
+          Through my studies, I have strengthened my ability to manage timelines,
+          break complex tasks into achievable milestones, and reflect critically
+          on outcomes. I am motivated to continue building industry-ready skills
+          for internship and graduate opportunities.
+        </p>
+      </section>
+
+      <section class="section container reveal" id="artefacts">
+        <h2>Portfolio Artefacts</h2>
+        <p class="section-intro">
+          These two artefacts demonstrate key capabilities relevant to project
+          environments.
+        </p>
+
+        <div class="artefact-controls">
+          <button class="tab-button active" data-target="artefact-1">Artefact 1</button>
+          <button class="tab-button" data-target="artefact-2">Artefact 2</button>
+        </div>
+
+        <article class="card tab-panel active" id="artefact-1">
+          <h3>Artefact 1: Project Plan and Timeline</h3>
+          <p class="meta">Skill focus: Planning, scheduling, and coordination</p>
+          <p>
+            This artefact highlights my ability to scope tasks, sequence
+            activities, and monitor progress through structured planning tools.
+            It reflects how I approached resource allocation and milestone
+            tracking in a team context.
+          </p>
+          <p>
+            <strong>Evidence link:</strong>
+            <a href="#" target="_blank" rel="noreferrer">
+              Add link to your project plan file
+            </a>
+          </p>
+        </article>
+
+        <article class="card tab-panel" id="artefact-2">
+          <h3>Artefact 2: Team Report or Reflection</h3>
+          <p class="meta">
+            Skill focus: Communication, collaboration, and critical reflection
+          </p>
+          <p>
+            This artefact demonstrates my contribution to team-based academic
+            work and my ability to communicate findings clearly. It also shows
+            how I evaluate project outcomes and identify improvements for future
+            performance.
+          </p>
+          <p>
+            <strong>Evidence link:</strong>
+            <a href="#" target="_blank" rel="noreferrer">
+              Add link to your report/reflection file
+            </a>
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer" id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Email: your.email@example.com</p>
+        <p>LinkedIn: <a href="#" target="_blank" rel="noreferrer">Add your LinkedIn URL</a></p>
+        <p class="copyright">© <span id="year"></span> Your Name</p>
+      </div>
+    </footer>
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">Top</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
