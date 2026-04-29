@@ -15,9 +15,22 @@
       <nav class="nav container">
         <a class="logo" href="#top">Your Name</a>
         <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#artefacts">Artefacts</a>
-          <a href="#contact">Contact</a>
+          <a class="nav-link" href="#about" data-section="about">About</a>
+          <a
+            class="nav-link"
+            href="#skills"
+            data-section="skills"
+          >
+            Skills
+          </a>
+          <a
+            class="nav-link"
+            href="#artefacts"
+            data-section="artefacts"
+          >
+            Artefacts
+          </a>
+          <a class="nav-link" href="#contact" data-section="contact">Contact</a>
           <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
             Dark mode
           </button>
@@ -25,14 +38,19 @@
       </nav>
 
       <section class="hero-content container" id="top">
-        <p class="eyebrow">Year 3 Student ePortfolio</p>
-        <h1>Building practical project and teamwork capability</h1>
-        <p class="lead">
-          This ePortfolio presents my professional profile and selected artefacts
-          that demonstrate my communication, project planning, and problem-solving
-          skills.
-        </p>
-        <a class="button" href="#artefacts">View Artefacts</a>
+        <div class="hero-grid">
+          <div class="avatar" aria-hidden="true"></div>
+          <div class="hero-copy">
+            <p class="eyebrow">Year 3 Student ePortfolio</p>
+            <h1>Modern project management, teamwork, and analysis.</h1>
+            <p class="lead">
+              This ePortfolio showcases my professional profile and selected
+              artefacts that demonstrate planning, communication, and
+              evidence-based problem solving.
+            </p>
+            <a class="button" href="#artefacts">View Artefacts</a>
+          </div>
+        </div>
       </section>
     </header>
 
@@ -51,6 +69,21 @@
           on outcomes. I am motivated to continue building industry-ready skills
           for internship and graduate opportunities.
         </p>
+      </section>
+
+      <section class="section container reveal" id="skills">
+        <h2>Skills</h2>
+        <p class="section-intro">
+          A quick snapshot of capabilities that show up in my project work.
+        </p>
+        <div class="chips" role="list" aria-label="Skill chips">
+          <span class="chip" role="listitem">Project Planning</span>
+          <span class="chip" role="listitem">Scheduling &amp; Monitoring</span>
+          <span class="chip" role="listitem">Team Collaboration</span>
+          <span class="chip" role="listitem">Stakeholder Communication</span>
+          <span class="chip" role="listitem">Risk &amp; Issue Management</span>
+          <span class="chip" role="listitem">Reflection &amp; Improvement</span>
+        </div>
       </section>
 
       <section class="section container reveal" id="artefacts">
@@ -106,12 +139,21 @@
     <footer class="footer" id="contact">
       <div class="container">
         <h2>Contact</h2>
-        <p>Email: your.email@example.com</p>
-        <p>LinkedIn: <a href="#" target="_blank" rel="noreferrer">Add your LinkedIn URL</a></p>
+        <p class="contact-line">
+          Email: <span id="email-text">your.email@example.com</span>
+          <button class="ghost-button" id="copy-email" type="button">
+            Copy
+          </button>
+        </p>
+        <p class="contact-line">
+          LinkedIn:
+          <a href="#" target="_blank" rel="noreferrer">Add your LinkedIn URL</a>
+        </p>
         <p class="copyright">© <span id="year"></span> Your Name</p>
       </div>
     </footer>
     <button class="back-to-top" id="back-to-top" aria-label="Back to top">Top</button>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script src="script.js"></script>
   </body>
