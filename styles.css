@@ -331,14 +331,14 @@ h1 {
 
 .about-intro {
   display: grid;
-  grid-template-columns: minmax(180px, 240px) 1fr;
-  gap: 1rem 1.35rem;
-  align-items: start;
+  grid-template-columns: 1fr minmax(190px, 260px);
+  gap: 1rem 1.5rem;
+  align-items: center;
   margin-bottom: 0.8rem;
 }
 
 .about-profile {
-  margin: 0.15rem 0 0;
+  margin: 0;
   width: 100%;
 }
 
@@ -347,7 +347,7 @@ h1 {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: 36% 28%;
+  object-position: 52% 28%;
   border-radius: 22px;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
@@ -355,6 +355,10 @@ h1 {
 
 .about-intro-copy .chapter-lead {
   margin-top: 0;
+}
+
+.about-intro-copy p:last-child {
+  margin-bottom: 0;
 }
 
 .main-scroll {
@@ -1025,6 +1029,7 @@ a:hover {
 
   .about-profile {
     width: min(220px, 72%);
+    justify-self: start;
   }
 }
 
