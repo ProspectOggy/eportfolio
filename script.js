@@ -15,10 +15,6 @@ const tiltCards = document.querySelectorAll(".tilt-card");
 const rotatingWord = document.getElementById("hero-rotating-word");
 const artefactGalleries = document.querySelectorAll("[data-gallery]");
 
-const HERO_CLIP_START = 15;
-const HERO_CLIP_END = 75;
-const HERO_VIDEO_ID = "-6CyOPXA_Zc";
-
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
 }
@@ -76,68 +72,6 @@ artefactGalleries.forEach((gallery) => {
     });
   });
 });
-
-function initHeroYouTube() {
-  if (typeof YT === "undefined" || !YT.Player) return;
-
-  const player = new YT.Player("hero-yt", {
-    videoId: HERO_VIDEO_ID,
-    width: "100%",
-    height: "100%",
-    playerVars: {
-      autoplay: 1,
-      mute: 1,
-      controls: 0,
-      rel: 0,
-      modestbranding: 1,
-      playsinline: 1,
-      iv_load_policy: 3,
-      showinfo: 0,
-      fs: 0,
-      disablekb: 1,
-      origin: window.location.origin,
-    },
-    events: {
-      onReady: (e) => {
-        const p = e.target;
-        p.mute();
-        p.seekTo(HERO_CLIP_START, true);
-        p.playVideo();
-        document.querySelector(".hero")?.classList.add("hero--youtube-ready");
-        document.getElementById("hero-aurora")?.classList.add("is-dim");
-        const frame = document.querySelector("#hero-yt iframe");
-        frame?.setAttribute("title", "Cinematic backdrop video excerpt");
-      },
-      onStateChange: (e) => {
-        if (e.data === YT.PlayerState.ENDED) {
-          e.target.seekTo(HERO_CLIP_START, true);
-          e.target.playVideo();
-        }
-      },
-    },
-  });
-
-  window.setInterval(() => {
-    try {
-      const t = player.getCurrentTime();
-      if (typeof t === "number" && t >= HERO_CLIP_END - 0.35) {
-        player.seekTo(HERO_CLIP_START, true);
-      }
-    } catch {
-      /* ignore */
-    }
-  }, 280);
-}
-
-if (!window.YT) {
-  const tag = document.createElement("script");
-  tag.src = "https://www.youtube.com/iframe_api";
-  const firstScript = document.getElementsByTagName("script")[0];
-  firstScript.parentNode.insertBefore(tag, firstScript);
-  window.onYouTubeIframeAPIReady = initHeroYouTube;
-} else if (YT.Player) {
-  initHeroYouTube();
-}
 
 if (scrollCue) {
   scrollCue.addEventListener("click", () => {
