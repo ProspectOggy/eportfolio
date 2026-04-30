@@ -335,20 +335,59 @@
               <span class="folder-label">3101ENG Structural Analysis</span>
             </button>
             <div class="folder-content">
-              <h3>Artefact 1: 3101ENG — Structural analysis</h3>
-              <p class="meta">Skill focus: Analysis, assumptions, and clear engineering judgement</p>
+              <h3>Artefact 1: Introduction to Petroleum Engineering (Waseda Exchange, Japan)</h3>
+              <p class="meta">Skill focus: Image processing, analysis workflow, and technical interpretation</p>
               <p>
-                Seismic fault detection analysis project demonstrating image processing,
-                technical reporting, and interpretation of geological fault patterns.
-                The artefact includes the final presentation and showcases methodology,
-                detected features, and conclusions.
+                During my exchange in Japan, I completed a seismic fault detection
+                project that compared original seismic imagery with algorithm-detected
+                fault features. The workflow combined Java-based UI tools and image
+                processing outputs to identify major fault lines and summarise geological
+                risk indicators in a clear report.
               </p>
-              <p>
-                <strong>Evidence link:</strong>
-                <a href="assets/RuslanAkimovFinalPresentation.pptx" target="_blank" rel="noreferrer">
-                  RuslanAkimovFinalPresentation.pptx
-                </a>
-              </p>
+              <div class="artefact-gallery" data-gallery>
+                <figure class="artefact-gallery-main">
+                  <img
+                    id="artefact1-main-image"
+                    src="assets/petroleum-detection-output.png"
+                    alt="Seismic fault detection output with labeled fault regions."
+                  />
+                  <figcaption id="artefact1-caption">
+                    Detected seismic features with labeled fault regions (F1, F2, ...).
+                  </figcaption>
+                </figure>
+                <div class="artefact-gallery-thumbs" role="tablist" aria-label="Artefact 1 screenshots">
+                  <button
+                    class="artefact-thumb is-active"
+                    type="button"
+                    data-image="assets/petroleum-detection-output.png"
+                    data-caption="Detected seismic features with labeled fault regions (F1, F2, ...)."
+                    data-alt="Seismic fault detection output with labeled fault regions."
+                    aria-label="Show detected output screenshot"
+                  >
+                    Detection Output
+                  </button>
+                  <button
+                    class="artefact-thumb"
+                    type="button"
+                    data-image="assets/petroleum-analysis-report.png"
+                    data-caption="Generated analysis report summarising detected faults and recommended follow-up analysis."
+                    data-alt="Seismic fault analysis report window."
+                    aria-label="Show analysis report screenshot"
+                  >
+                    Analysis Report
+                  </button>
+                  <button
+                    class="artefact-thumb"
+                    type="button"
+                    data-image="assets/petroleum-ui-selection.png"
+                    data-caption="Java Swing interface and analysis type selection used in the project workflow."
+                    data-alt="Java application interface with analysis type selection dialog."
+                    aria-label="Show interface screenshot"
+                  >
+                    Java UI Workflow
+                  </button>
+                </div>
+              </div>
             </div>
           </article>
 

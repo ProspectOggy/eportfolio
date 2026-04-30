@@ -13,6 +13,7 @@ const scrollCue = document.getElementById("scroll-cue");
 const scrollProgress = document.getElementById("scroll-progress");
 const tiltCards = document.querySelectorAll(".tilt-card");
 const rotatingWord = document.getElementById("hero-rotating-word");
+const artefactGalleries = document.querySelectorAll("[data-gallery]");
 
 const HERO_CLIP_START = 15;
 const HERO_CLIP_END = 75;
@@ -51,6 +52,28 @@ folderCards.forEach((card) => {
     const next = !card.classList.contains("is-open");
     card.classList.toggle("is-open", next);
     trigger.setAttribute("aria-expanded", String(next));
+  });
+});
+
+artefactGalleries.forEach((gallery) => {
+  const mainImage = gallery.querySelector("img");
+  const caption = gallery.querySelector("figcaption");
+  const thumbs = gallery.querySelectorAll(".artefact-thumb");
+  if (!mainImage || !caption || thumbs.length === 0) return;
+
+  thumbs.forEach((thumb) => {
+    thumb.addEventListener("click", () => {
+      const nextSrc = thumb.getAttribute("data-image");
+      const nextCaption = thumb.getAttribute("data-caption");
+      const nextAlt = thumb.getAttribute("data-alt");
+      if (!nextSrc) return;
+
+      mainImage.src = nextSrc;
+      if (nextAlt) mainImage.alt = nextAlt;
+      if (nextCaption) caption.textContent = nextCaption;
+      thumbs.forEach((t) => t.classList.remove("is-active"));
+      thumb.classList.add("is-active");
+    });
   });
 });
 

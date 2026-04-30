@@ -722,6 +722,60 @@ h1 {
   transform: translateY(-1px);
 }
 
+.artefact-gallery {
+  margin-top: 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.75rem;
+  background: color-mix(in srgb, var(--surface) 90%, #0000);
+}
+
+.artefact-gallery-main {
+  margin: 0;
+}
+
+.artefact-gallery-main img {
+  width: 100%;
+  max-height: 360px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 84%, #0000);
+}
+
+.artefact-gallery-main figcaption {
+  margin-top: 0.55rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.artefact-gallery-thumbs {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.artefact-thumb {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
+}
+
+.artefact-thumb:hover {
+  transform: translateY(-1px);
+}
+
+.artefact-thumb.is-active {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 15%, var(--surface));
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(20px);
