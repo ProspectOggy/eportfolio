@@ -329,9 +329,17 @@ h1 {
   color: var(--accent);
 }
 
+.about-intro {
+  display: grid;
+  grid-template-columns: minmax(180px, 240px) 1fr;
+  gap: 1rem 1.35rem;
+  align-items: start;
+  margin-bottom: 0.8rem;
+}
+
 .about-profile {
-  margin: 0.9rem 0 1rem;
-  width: min(240px, 62%);
+  margin: 0.15rem 0 0;
+  width: 100%;
 }
 
 .about-profile img {
@@ -339,10 +347,14 @@ h1 {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: center 28%;
-  border-radius: 16px;
+  object-position: 36% 28%;
+  border-radius: 22px;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
+}
+
+.about-intro-copy .chapter-lead {
+  margin-top: 0;
 }
 
 .main-scroll {
@@ -1004,6 +1016,11 @@ a:hover {
   }
   .folder-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-intro {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
   }
 
   .about-profile {
