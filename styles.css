@@ -11,6 +11,8 @@
   --shadow: 0 12px 30px rgba(16, 39, 71, 0.08);
   --radius: 16px;
   --nav-link: #dbe8ff;
+  --hero-scrim-top: rgba(6, 12, 28, 0.42);
+  --hero-scrim-bottom: rgba(6, 12, 28, 0.86);
 }
 
 [data-theme="dark"] {
@@ -107,7 +109,7 @@ p {
 .hero-scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(6, 12, 28, 0.5) 0%, rgba(6, 12, 28, 0.86) 100%);
+  background: linear-gradient(180deg, var(--hero-scrim-top) 0%, var(--hero-scrim-bottom) 100%);
 }
 
 @keyframes aurora-shift {
@@ -969,6 +971,15 @@ a:hover {
 }
 
 @media (max-width: 720px) {
+  :root {
+    --hero-scrim-top: rgba(6, 12, 28, 0.58);
+    --hero-scrim-bottom: rgba(6, 12, 28, 0.92);
+  }
+
+  .hero--youtube-ready .hero-aurora.is-dim {
+    opacity: 0.2;
+  }
+
   .hero-layout {
     grid-template-columns: 1fr;
   }
