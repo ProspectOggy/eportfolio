@@ -1,8 +1,7 @@
 const yearSpan = document.getElementById("year");
 const themeToggle = document.getElementById("theme-toggle");
 const backToTop = document.getElementById("back-to-top");
-const tabButtons = document.querySelectorAll(".tab-button");
-const tabPanels = document.querySelectorAll(".tab-panel");
+const folderCards = document.querySelectorAll("[data-folder]");
 const revealSections = document.querySelectorAll(".reveal");
 const navLinks = document.querySelectorAll(".nav-link");
 const copyEmailBtn = document.getElementById("copy-email");
@@ -10,7 +9,6 @@ const emailText = document.getElementById("email-text");
 const toastEl = document.getElementById("toast");
 const scrollCue = document.getElementById("scroll-cue");
 const scrollProgress = document.getElementById("scroll-progress");
-const cursorGlow = document.getElementById("cursor-glow");
 const tiltCards = document.querySelectorAll(".tilt-card");
 
 const HERO_CLIP_START = 15;
@@ -43,28 +41,14 @@ if (themeToggle) {
   });
 }
 
-tabButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const targetId = button.getAttribute("data-target");
-    tabButtons.forEach((btn) => btn.classList.remove("active"));
-    tabPanels.forEach((panel) => panel.classList.remove("active"));
-
-    button.classList.add("active");
-    tabButtons.forEach((btn) => {
-      btn.setAttribute("aria-selected", btn === button ? "true" : "false");
-    });
-    const targetPanel = document.getElementById(targetId);
-    if (targetPanel) {
-      targetPanel.classList.add("active");
-    }
-    tabPanels.forEach((panel) => {
-      panel.setAttribute("aria-hidden", panel.classList.contains("active") ? "false" : "true");
-    });
+folderCards.forEach((card) => {
+  const trigger = card.querySelector("[data-folder-toggle]");
+  if (!trigger) return;
+  trigger.addEventListener("click", () => {
+    const next = !card.classList.contains("is-open");
+    card.classList.toggle("is-open", next);
+    trigger.setAttribute("aria-expanded", String(next));
   });
-});
-
-tabPanels.forEach((panel) => {
-  panel.setAttribute("aria-hidden", panel.classList.contains("active") ? "false" : "true");
 });
 
 function initHeroYouTube() {
@@ -132,17 +116,6 @@ if (!window.YT) {
 if (scrollCue) {
   scrollCue.addEventListener("click", () => {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
-  });
-}
-
-if (cursorGlow) {
-  window.addEventListener("pointermove", (event) => {
-    cursorGlow.style.opacity = "1";
-    cursorGlow.style.left = `${event.clientX}px`;
-    cursorGlow.style.top = `${event.clientY}px`;
-  });
-  window.addEventListener("pointerleave", () => {
-    cursorGlow.style.opacity = "0";
   });
 }
 

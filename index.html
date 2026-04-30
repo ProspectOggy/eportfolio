@@ -12,7 +12,6 @@
   </head>
   <body>
     <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
-    <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
     <header class="hero" id="top">
       <div class="hero-media" aria-hidden="true">
         <div id="hero-yt" class="hero-yt"></div>
@@ -330,47 +329,60 @@
           real files (PDF in the repo, Google Drive, or Griffith submission links).
         </p>
 
-        <div class="artefact-controls" role="tablist" aria-label="Artefact tabs">
-          <button
-            class="tab-button active"
-            type="button"
-            role="tab"
-            aria-selected="true"
-            data-target="artefact-1"
-          >
-            Artefact 1
-          </button>
-          <button class="tab-button" type="button" role="tab" aria-selected="false" data-target="artefact-2">
-            Artefact 2
-          </button>
+        <div class="folder-grid">
+          <article class="folder-card is-open" data-folder>
+            <button class="folder-button" type="button" data-folder-toggle aria-expanded="true">
+              <span class="folder-stack" aria-hidden="true">
+                <span class="folder-layer folder-layer-1"></span>
+                <span class="folder-layer folder-layer-2"></span>
+                <span class="folder-main">
+                  <span class="folder-tab"></span>
+                  <span class="folder-title">Artefact 1</span>
+                </span>
+              </span>
+              <span class="folder-label">3101ENG Structural Analysis</span>
+            </button>
+            <div class="folder-content">
+              <h3>Artefact 1: 3101ENG — Structural analysis</h3>
+              <p class="meta">Skill focus: Analysis, assumptions, and clear engineering judgement</p>
+              <p>
+                Summarise one piece of structural analysis work (e.g. load paths, support
+                conditions, or a key result). Explain what you did, what you learned, and
+                how it connects to professional practice.
+              </p>
+              <p>
+                <strong>Evidence link:</strong>
+                <a href="#" target="_blank" rel="noreferrer">Add link to your analysis report or PDF</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="folder-card" data-folder>
+            <button class="folder-button" type="button" data-folder-toggle aria-expanded="false">
+              <span class="folder-stack" aria-hidden="true">
+                <span class="folder-layer folder-layer-1"></span>
+                <span class="folder-layer folder-layer-2"></span>
+                <span class="folder-main">
+                  <span class="folder-tab"></span>
+                  <span class="folder-title">Artefact 2</span>
+                </span>
+              </span>
+              <span class="folder-label">Project / Reflection</span>
+            </button>
+            <div class="folder-content">
+              <h3>Artefact 2: Project or reflection</h3>
+              <p class="meta">Skill focus: Teamwork, communication, or critical reflection</p>
+              <p>
+                Choose a second item that complements the first — for example a team
+                deliverable, a lab reflection, or a short write-up of lessons learned.
+              </p>
+              <p>
+                <strong>Evidence link:</strong>
+                <a href="#" target="_blank" rel="noreferrer">Add link to your second artefact</a>
+              </p>
+            </div>
+          </article>
         </div>
-
-        <article class="card tab-panel active" id="artefact-1" role="tabpanel" aria-hidden="false">
-          <h3>Artefact 1: 3101ENG — Structural analysis</h3>
-          <p class="meta">Skill focus: Analysis, assumptions, and clear engineering judgement</p>
-          <p>
-            Summarise one piece of structural analysis work (e.g. load paths, support
-            conditions, or a key result). Explain what you did, what you learned, and
-            how it connects to professional practice.
-          </p>
-          <p>
-            <strong>Evidence link:</strong>
-            <a href="#" target="_blank" rel="noreferrer">Add link to your analysis report or PDF</a>
-          </p>
-        </article>
-
-        <article class="card tab-panel" id="artefact-2" role="tabpanel" aria-hidden="true">
-          <h3>Artefact 2: Project or reflection</h3>
-          <p class="meta">Skill focus: Teamwork, communication, or critical reflection</p>
-          <p>
-            Choose a second item that complements the first — for example a team
-            deliverable, a lab reflection, or a short write-up of lessons learned.
-          </p>
-          <p>
-            <strong>Evidence link:</strong>
-            <a href="#" target="_blank" rel="noreferrer">Add link to your second artefact</a>
-          </p>
-        </article>
       </section>
     </main>
 

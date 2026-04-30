@@ -40,19 +40,6 @@ body {
     var(--bg);
 }
 
-.cursor-glow {
-  position: fixed;
-  width: 260px;
-  height: 260px;
-  border-radius: 999px;
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0;
-  background: radial-gradient(circle, rgba(31, 111, 235, 0.16), rgba(31, 111, 235, 0));
-  transform: translate(-50%, -50%);
-  transition: opacity 0.25s ease;
-}
-
 .container {
   width: min(960px, 92%);
   margin: 0 auto;
@@ -592,46 +579,125 @@ h1 {
   will-change: transform;
 }
 
-.artefact-controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
+.folder-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
 }
 
-.tab-button {
+.folder-card {
   border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
-  border-radius: 8px;
-  padding: 0.45rem 0.9rem;
+  border-radius: 12px;
+  padding: 0.85rem;
+  background: color-mix(in srgb, var(--surface) 88%, #0000);
+}
+
+.folder-button {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: inherit;
   cursor: pointer;
-  transition: transform 0.12s ease, border-color 0.12s ease, background-color 0.12s ease;
+  text-align: left;
+  padding: 0;
 }
 
-.tab-button:focus-visible {
-  outline: 3px solid color-mix(in srgb, var(--accent) 60%, transparent);
-  outline-offset: 2px;
+.folder-stack {
+  display: block;
+  position: relative;
+  height: 96px;
 }
 
-.tab-button.active {
-  border-color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 15%, var(--surface));
+.folder-layer {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  height: 54px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--accent) 22%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--accent) 38%, var(--border));
+  transform-origin: bottom center;
+  transition: transform 0.35s ease, opacity 0.35s ease;
 }
 
-.tab-panel {
-  margin-top: 0;
-  opacity: 0;
-  transform: translateY(8px);
+.folder-layer-1 {
+  bottom: 16px;
+  opacity: 0.6;
+  transform: translateY(8px) scale(0.96);
+}
+
+.folder-layer-2 {
+  bottom: 8px;
+  opacity: 0.75;
+  transform: translateY(4px) scale(0.98);
+}
+
+.folder-main {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60px;
+  border-radius: 12px;
+  background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 26%, var(--surface)), var(--surface));
+  border: 1px solid color-mix(in srgb, var(--accent) 42%, var(--border));
+  box-shadow: 0 10px 24px rgba(12, 26, 52, 0.16);
+  display: flex;
+  align-items: end;
+  padding: 0.65rem 0.7rem;
+}
+
+.folder-tab {
+  position: absolute;
+  top: -12px;
+  left: 0.7rem;
+  width: 84px;
+  height: 18px;
+  border-radius: 8px 8px 0 0;
+  background: color-mix(in srgb, var(--accent) 32%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--border));
+  border-bottom: none;
+}
+
+.folder-title {
+  font-weight: 700;
+}
+
+.folder-label {
+  display: inline-block;
+  margin-top: 0.45rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.folder-content {
   max-height: 0;
   overflow: hidden;
-  transition: opacity 0.28s ease, transform 0.28s ease, max-height 0.35s ease;
+  transition: max-height 0.35s ease;
 }
 
-.tab-panel.active {
-  margin-top: 1rem;
-  opacity: 1;
-  transform: translateY(0);
-  max-height: 1000px;
+.folder-content h3,
+.folder-content p,
+.folder-content .meta {
+  margin-top: 0.75rem;
+}
+
+.folder-card.is-open .folder-content {
+  max-height: 420px;
+}
+
+.folder-card.is-open .folder-layer-1 {
+  transform: translateY(0) rotate(-3deg);
+  opacity: 0.82;
+}
+
+.folder-card.is-open .folder-layer-2 {
+  transform: translateY(-2px) rotate(2deg);
+  opacity: 0.92;
+}
+
+.folder-card.is-open .folder-main {
+  transform: translateY(-1px);
 }
 
 .reveal {
@@ -820,6 +886,9 @@ a:hover {
     grid-template-columns: 1fr;
   }
   .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .folder-grid {
     grid-template-columns: 1fr;
   }
 }
