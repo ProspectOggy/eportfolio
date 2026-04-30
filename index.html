@@ -3,54 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Name | ePortfolio</title>
+    <title>Ruslan Akimov | ePortfolio</title>
     <meta
       name="description"
-      content="Professional ePortfolio showcasing skills, experience, and project artefacts."
+      content="Ruslan Akimov — Griffith University. Bachelor of Engineering (Honours) / Bachelor of Data Science. Structural analysis and project artefacts."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
+    <header class="hero" id="top">
+      <div class="hero-media" aria-hidden="true">
+        <video
+          id="hero-video"
+          class="hero-bg-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="assets/hero-poster.jpg"
+        >
+          <source src="assets/hero.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-aurora"></div>
+        <div class="hero-scrim"></div>
+      </div>
+
       <nav class="nav container">
-        <a class="logo" href="#top">Your Name</a>
+        <a class="logo" href="#top">Ruslan Akimov</a>
         <div class="nav-links">
           <a class="nav-link" href="#about" data-section="about">About</a>
-          <a
-            class="nav-link"
-            href="#skills"
-            data-section="skills"
-          >
-            Skills
-          </a>
-          <a
-            class="nav-link"
-            href="#artefacts"
-            data-section="artefacts"
-          >
-            Artefacts
-          </a>
+          <a class="nav-link" href="#education" data-section="education">Education</a>
+          <a class="nav-link" href="#skills" data-section="skills">Skills</a>
+          <a class="nav-link" href="#artefacts" data-section="artefacts">Artefacts</a>
           <a class="nav-link" href="#contact" data-section="contact">Contact</a>
-          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">
             Dark mode
           </button>
         </div>
       </nav>
 
-      <section class="hero-content container" id="top">
-        <div class="hero-grid">
-          <div class="avatar" aria-hidden="true"></div>
-          <div class="hero-copy">
-            <p class="eyebrow">Year 3 Student ePortfolio</p>
-            <h1>Modern project management, teamwork, and analysis.</h1>
+      <section class="hero-content container">
+        <div class="hero-layout">
+          <div class="hero-copy hero-entrance">
+            <p class="eyebrow">3101ENG Structural Analysis · Gold Coast</p>
+            <h1>Greetings — I’m Ruslan Akimov</h1>
             <p class="lead">
-              This ePortfolio showcases my professional profile and selected
-              artefacts that demonstrate planning, communication, and
-              evidence-based problem solving.
+              Full-time student at Griffith University: Bachelor of Engineering
+              (Honours) / Bachelor of Data Science. This ePortfolio is a snapshot of
+              what I am learning and building as I grow toward civil infrastructure
+              and data-informed engineering.
             </p>
-            <a class="button" href="#artefacts">View Artefacts</a>
+            <div class="hero-actions">
+              <a class="button" href="#about">Read my story</a>
+              <a class="button button-ghost" href="#artefacts">View artefacts</a>
+            </div>
+          </div>
+
+          <div class="hero-visual hero-entrance hero-entrance-delay" aria-hidden="true">
+            <div class="hero-visual-frame">
+              <svg class="hero-svg" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="rgba(255,255,255,0.35)" />
+                    <stop offset="100%" stop-color="rgba(255,255,255,0.05)" />
+                  </linearGradient>
+                </defs>
+                <rect x="24" y="240" width="272" height="8" rx="4" fill="rgba(255,255,255,0.15)" />
+                <path
+                  class="hero-beam"
+                  d="M40 240 L160 80 L280 240"
+                  fill="none"
+                  stroke="url(#g1)"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <path
+                  class="hero-beam hero-beam-2"
+                  d="M70 240 L160 120 L250 240"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.22)"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <circle class="hero-node" cx="160" cy="80" r="6" fill="#fff" />
+                <circle class="hero-node hero-node-2" cx="160" cy="120" r="5" fill="#cfe3ff" />
+              </svg>
+              <p class="hero-visual-caption">Structural motif · animated entrance</p>
+            </div>
           </div>
         </div>
+        <button class="scroll-cue" id="scroll-cue" type="button" aria-label="Scroll to About">
+          <span class="scroll-cue-line"></span>
+        </button>
       </section>
     </header>
 
@@ -58,79 +102,118 @@
       <section class="section container" id="about">
         <h2>About Me</h2>
         <p>
-          I am a Year 3 student focused on developing strong project delivery,
-          stakeholder communication, and analytical skills. I enjoy working in
-          teams to plan, execute, and refine solutions that are practical and
-          evidence-based.
+          My name is Ruslan Akimov. I am a full-time student at Griffith University,
+          studying a double degree: Bachelor of Engineering (Honours) / Bachelor of
+          Data Science. I am entering my second year; over the coming four years I
+          aim to build lasting friendships, make meaningful connections, and gain
+          knowledge that helps me secure work I am genuinely interested in.
         </p>
         <p>
-          Through my studies, I have strengthened my ability to manage timelines,
-          break complex tasks into achievable milestones, and reflect critically
-          on outcomes. I am motivated to continue building industry-ready skills
-          for internship and graduate opportunities.
+          I was born in Armidale, NSW, and moved to the Gold Coast at a young age,
+          where I attended AB Paterson College. Mathematics has always drawn me in,
+          which led me toward engineering. I added data science because technology
+          is evolving quickly — it complements engineering and gives me a strong
+          parallel skill set.
         </p>
+        <p>
+          I enjoy exercise and learning new things. My hobbies include the gym and
+          sports, DJing, and electric guitar. I value empathy and connection, which
+          I believe will matter for networking and the job market.
+        </p>
+        <p>
+          After university, I want to work as a civil engineer on infrastructure,
+          and grow into more senior roles over time. Below is a snapshot of lessons
+          and projects from my studies so far — including work related to
+          <strong>3101ENG Structural Analysis</strong>.
+        </p>
+      </section>
+
+      <section class="section container reveal" id="education">
+        <h2>Education</h2>
+        <p class="section-intro">
+          Where I study and the pathway I am on — similar in spirit to a classic
+          ePortfolio “Education” section.
+        </p>
+        <article class="card">
+          <h3>Griffith University</h3>
+          <p class="meta">Gold Coast campus · Undergraduate</p>
+          <p>
+            <strong>Bachelor of Engineering (Honours) / Bachelor of Data Science</strong>.
+            Coursework includes mathematics, engineering fundamentals, programming,
+            and structural analysis (3101ENG).
+          </p>
+        </article>
+        <article class="card">
+          <h3>AB Paterson College</h3>
+          <p class="meta">Gold Coast, Queensland</p>
+          <p>
+            Secondary schooling that reinforced analytical thinking, discipline, and
+            teamwork — foundations I still rely on at university.
+          </p>
+        </article>
       </section>
 
       <section class="section container reveal" id="skills">
         <h2>Skills</h2>
         <p class="section-intro">
-          A quick snapshot of capabilities that show up in my project work.
+          Themes that show up in engineering, data science, and team project work.
         </p>
         <div class="chips" role="list" aria-label="Skill chips">
-          <span class="chip" role="listitem">Project Planning</span>
-          <span class="chip" role="listitem">Scheduling &amp; Monitoring</span>
-          <span class="chip" role="listitem">Team Collaboration</span>
-          <span class="chip" role="listitem">Stakeholder Communication</span>
-          <span class="chip" role="listitem">Risk &amp; Issue Management</span>
-          <span class="chip" role="listitem">Reflection &amp; Improvement</span>
+          <span class="chip" role="listitem">Structural reasoning</span>
+          <span class="chip" role="listitem">Mathematics &amp; modelling</span>
+          <span class="chip" role="listitem">Programming &amp; data</span>
+          <span class="chip" role="listitem">Technical communication</span>
+          <span class="chip" role="listitem">Team collaboration</span>
+          <span class="chip" role="listitem">Self-directed learning</span>
         </div>
       </section>
 
       <section class="section container reveal" id="artefacts">
         <h2>Portfolio Artefacts</h2>
         <p class="section-intro">
-          These two artefacts demonstrate key capabilities relevant to project
-          environments.
+          Two artefacts for your career task. Replace the placeholder links with your
+          real files (PDF in the repo, Google Drive, or Griffith submission links).
         </p>
 
-        <div class="artefact-controls">
-          <button class="tab-button active" data-target="artefact-1">Artefact 1</button>
-          <button class="tab-button" data-target="artefact-2">Artefact 2</button>
+        <div class="artefact-controls" role="tablist" aria-label="Artefact tabs">
+          <button
+            class="tab-button active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            data-target="artefact-1"
+          >
+            Artefact 1
+          </button>
+          <button class="tab-button" type="button" role="tab" aria-selected="false" data-target="artefact-2">
+            Artefact 2
+          </button>
         </div>
 
-        <article class="card tab-panel active" id="artefact-1">
-          <h3>Artefact 1: Project Plan and Timeline</h3>
-          <p class="meta">Skill focus: Planning, scheduling, and coordination</p>
+        <article class="card tab-panel active" id="artefact-1" role="tabpanel" aria-hidden="false">
+          <h3>Artefact 1: 3101ENG — Structural analysis</h3>
+          <p class="meta">Skill focus: Analysis, assumptions, and clear engineering judgement</p>
           <p>
-            This artefact highlights my ability to scope tasks, sequence
-            activities, and monitor progress through structured planning tools.
-            It reflects how I approached resource allocation and milestone
-            tracking in a team context.
+            Summarise one piece of structural analysis work (e.g. load paths, support
+            conditions, or a key result). Explain what you did, what you learned, and
+            how it connects to professional practice.
           </p>
           <p>
             <strong>Evidence link:</strong>
-            <a href="#" target="_blank" rel="noreferrer">
-              Add link to your project plan file
-            </a>
+            <a href="#" target="_blank" rel="noreferrer">Add link to your analysis report or PDF</a>
           </p>
         </article>
 
-        <article class="card tab-panel" id="artefact-2">
-          <h3>Artefact 2: Team Report or Reflection</h3>
-          <p class="meta">
-            Skill focus: Communication, collaboration, and critical reflection
-          </p>
+        <article class="card tab-panel" id="artefact-2" role="tabpanel" aria-hidden="true">
+          <h3>Artefact 2: Project or reflection</h3>
+          <p class="meta">Skill focus: Teamwork, communication, or critical reflection</p>
           <p>
-            This artefact demonstrates my contribution to team-based academic
-            work and my ability to communicate findings clearly. It also shows
-            how I evaluate project outcomes and identify improvements for future
-            performance.
+            Choose a second item that complements the first — for example a team
+            deliverable, a lab reflection, or a short write-up of lessons learned.
           </p>
           <p>
             <strong>Evidence link:</strong>
-            <a href="#" target="_blank" rel="noreferrer">
-              Add link to your report/reflection file
-            </a>
+            <a href="#" target="_blank" rel="noreferrer">Add link to your second artefact</a>
           </p>
         </article>
       </section>
@@ -138,21 +221,26 @@
 
     <footer class="footer" id="contact">
       <div class="container">
-        <h2>Contact</h2>
+        <h2>Let’s connect</h2>
+        <p class="footer-lead">
+          Thanks for visiting. If you would like to connect professionally, add your
+          LinkedIn below — layout inspired by clear, sectioned ePortfolios such as
+          <a href="https://kaijdavis2004.wixsite.com/kai-davis---eportf-1" target="_blank" rel="noreferrer"
+            >this example</a
+          >.
+        </p>
         <p class="contact-line">
-          Email: <span id="email-text">your.email@example.com</span>
-          <button class="ghost-button" id="copy-email" type="button">
-            Copy
-          </button>
+          Email: <span id="email-text">your.email@griffithuni.edu.au</span>
+          <button class="ghost-button" id="copy-email" type="button">Copy</button>
         </p>
         <p class="contact-line">
           LinkedIn:
           <a href="#" target="_blank" rel="noreferrer">Add your LinkedIn URL</a>
         </p>
-        <p class="copyright">© <span id="year"></span> Your Name</p>
+        <p class="copyright">© <span id="year"></span> Ruslan Akimov · Gold Coast, QLD</p>
       </div>
     </footer>
-    <button class="back-to-top" id="back-to-top" aria-label="Back to top">Top</button>
+    <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top">Top</button>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script src="script.js"></script>

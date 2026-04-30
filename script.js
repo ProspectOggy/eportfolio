@@ -8,6 +8,8 @@ const navLinks = document.querySelectorAll(".nav-link");
 const copyEmailBtn = document.getElementById("copy-email");
 const emailText = document.getElementById("email-text");
 const toastEl = document.getElementById("toast");
+const scrollCue = document.getElementById("scroll-cue");
+const heroVideo = document.getElementById("hero-video");
 
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
@@ -49,8 +51,30 @@ tabButtons.forEach((button) => {
     if (targetPanel) {
       targetPanel.classList.add("active");
     }
+    tabPanels.forEach((panel) => {
+      panel.setAttribute("aria-hidden", panel.classList.contains("active") ? "false" : "true");
+    });
   });
 });
+
+tabPanels.forEach((panel) => {
+  panel.setAttribute("aria-hidden", panel.classList.contains("active") ? "false" : "true");
+});
+
+if (heroVideo) {
+  heroVideo.addEventListener("error", () => {
+    heroVideo.classList.add("is-hidden");
+  });
+  heroVideo.addEventListener("loadeddata", () => {
+    heroVideo.classList.add("is-ready");
+  });
+}
+
+if (scrollCue) {
+  scrollCue.addEventListener("click", () => {
+    document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+  });
+}
 
 if (navLinks.length > 0) {
   const byId = new Map(
