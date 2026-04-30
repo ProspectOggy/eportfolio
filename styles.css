@@ -329,6 +329,22 @@ h1 {
   color: var(--accent);
 }
 
+.about-profile {
+  margin: 0.9rem 0 1rem;
+  width: min(240px, 62%);
+}
+
+.about-profile img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 28%;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
 .main-scroll {
   position: relative;
 }
@@ -988,6 +1004,10 @@ a:hover {
   }
   .folder-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-profile {
+    width: min(220px, 72%);
   }
 }
 
