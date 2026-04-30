@@ -367,6 +367,16 @@ h1 {
   margin-bottom: 1rem;
 }
 
+.list-compact {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+  color: var(--text);
+}
+
+.list-compact li {
+  margin: 0.35rem 0;
+}
+
 .card {
   border: 1px solid var(--border);
   border-radius: 10px;
