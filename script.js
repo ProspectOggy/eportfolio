@@ -5,7 +5,9 @@ const folderCards = document.querySelectorAll("[data-folder]");
 const revealSections = document.querySelectorAll(".reveal");
 const navLinks = document.querySelectorAll(".nav-link");
 const copyEmailBtn = document.getElementById("copy-email");
+const copyUniEmailBtn = document.getElementById("copy-uni-email");
 const emailText = document.getElementById("email-text");
+const uniEmailText = document.getElementById("uni-email-text");
 const toastEl = document.getElementById("toast");
 const scrollCue = document.getElementById("scroll-cue");
 const scrollProgress = document.getElementById("scroll-progress");
@@ -249,6 +251,33 @@ if (copyEmailBtn && emailText) {
       try {
         document.execCommand("copy");
         showToast("Email copied to clipboard");
+      } catch {
+        showToast("Copy failed. Please copy manually.");
+      } finally {
+        document.body.removeChild(textarea);
+      }
+    }
+  });
+}
+
+if (copyUniEmailBtn && uniEmailText) {
+  copyUniEmailBtn.addEventListener("click", async () => {
+    const text = (uniEmailText.textContent || "").trim();
+    if (!text) return;
+
+    try {
+      await navigator.clipboard.writeText(text);
+      showToast("Uni email copied to clipboard");
+    } catch (e) {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      textarea.style.position = "fixed";
+      textarea.style.left = "-9999px";
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand("copy");
+        showToast("Uni email copied to clipboard");
       } catch {
         showToast("Copy failed. Please copy manually.");
       } finally {
