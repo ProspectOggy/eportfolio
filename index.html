@@ -358,24 +358,35 @@
               <span class="folder-label">3101ENG Structural Analysis</span>
             </button>
             <div class="folder-content">
-              <h3>Artefact 1: Introduction to Petroleum Engineering (Waseda Exchange, Japan)</h3>
-              <p class="meta">Skill focus: Image processing, analysis workflow, and technical interpretation</p>
+              <h3>Artefact 1: Seismic Fault Detection</h3>
+              <p class="meta">Petroleum Engineering x Data Science · Java 21 (Maven) · Image processing</p>
               <p>
-                During my exchange in Japan, I completed a seismic fault detection
-                project that compared original seismic imagery with algorithm-detected
-                fault features. The workflow combined Java-based UI tools and image
-                processing outputs to identify major fault lines and summarise geological
-                risk indicators in a clear report.
+                For a final petroleum engineering assessment, I presented how data
+                science can be applied across the oil and gas value chain, then anchored
+                the talk with a working Java seismic fault detection tool. The tool
+                processes greyscale seismic reflection imagery, detects discontinuity
+                features, and generates both an annotated output and a structured report.
+              </p>
+              <p>
+                In the worked example, the model identified <strong>17 fault features</strong>
+                in a <strong>275 x 183</strong> seismic section, with per-feature coordinates and
+                size information to support downstream interpretation.
+              </p>
+              <p>
+                <strong>Full artefact page:</strong>
+                <a href="assets/artefact-seismic.html" target="_blank" rel="noreferrer">
+                  Open seismic artefact details
+                </a>
               </p>
               <div class="artefact-gallery" data-gallery>
                 <figure class="artefact-gallery-main">
                   <img
                     id="artefact1-main-image"
                     src="assets/petroleum-main-cropped.png"
-                    alt="Seismic detection output comparison image."
+                    alt="Raw seismic input beside annotated seismic fault output."
                   />
                   <figcaption id="artefact1-caption">
-                    Seismic detection output comparison from the project analysis workflow.
+                    Raw seismic reflection input (left) and annotated fault detection output (right), with 17 identified features.
                   </figcaption>
                 </figure>
                 <div class="artefact-gallery-thumbs" role="tablist" aria-label="Artefact 1 screenshots">
@@ -383,31 +394,21 @@
                     class="artefact-thumb is-active"
                     type="button"
                     data-image="assets/petroleum-main-cropped.png"
-                    data-caption="Seismic detection output comparison from the project analysis workflow."
-                    data-alt="Seismic detection output comparison image."
+                    data-caption="Raw seismic reflection input (left) and annotated fault detection output (right), with 17 identified features."
+                    data-alt="Raw seismic input beside annotated seismic fault output."
                     aria-label="Show seismic output comparison screenshot"
                   >
-                    Seismic Output
+                    Input vs Output
                   </button>
                   <button
                     class="artefact-thumb"
                     type="button"
                     data-image="assets/petroleum-analysis-report.png"
-                    data-caption="Generated analysis report summarising detected faults and recommended follow-up analysis."
-                    data-alt="Seismic fault analysis report window."
+                    data-caption="Structured analysis report with summary metrics, geological interpretation flag, and per-feature coordinates for downstream geophysical review."
+                    data-alt="Structured seismic fault analysis report interface."
                     aria-label="Show analysis report screenshot"
                   >
                     Analysis Report
-                  </button>
-                  <button
-                    class="artefact-thumb"
-                    type="button"
-                    data-image="assets/petroleum-ui-selection.png"
-                    data-caption="Java Swing interface and analysis type selection used in the project workflow."
-                    data-alt="Java application interface with analysis type selection dialog."
-                    aria-label="Show interface screenshot"
-                  >
-                    Java UI Workflow
                   </button>
                 </div>
               </div>
