@@ -11,22 +11,23 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
     <header class="hero" id="top">
       <div class="hero-media" aria-hidden="true">
-        <video
-          id="hero-video"
-          class="hero-bg-video"
-          autoplay
-          muted
-          loop
-          playsinline
-          poster="assets/hero-poster.jpg"
-        >
-          <source src="assets/hero.mp4" type="video/mp4" />
-        </video>
-        <div class="hero-aurora"></div>
+        <div id="hero-yt" class="hero-yt"></div>
+        <div class="hero-aurora" id="hero-aurora"></div>
         <div class="hero-scrim"></div>
       </div>
+      <p class="hero-media-credit">
+        Cinematic backdrop: excerpt from
+        <a
+          href="https://www.youtube.com/watch?v=-6CyOPXA_Zc"
+          target="_blank"
+          rel="noreferrer"
+          >YouTube</a
+        >
+        (15s–1:15 loop)
+      </p>
 
       <nav class="nav container">
         <a class="logo" href="#top">Ruslan Akimov</a>
@@ -99,10 +100,16 @@
       </section>
     </header>
 
-    <main>
-      <section class="section container" id="about">
-        <h2>About Me</h2>
-        <p>
+    <main class="main-scroll">
+      <section class="section container scroll-chapter" id="about">
+        <p class="chapter-kicker scroll-reveal">ePortfolio</p>
+        <h2 class="chapter-title scroll-reveal">About me</h2>
+        <p class="lead chapter-lead scroll-reveal">
+          Engineering, data, and real project delivery — not only a CV: explore sections
+          below with smooth reveals similar to product storytelling pages like
+          <a href="https://www.apple.com/au/ipad/" target="_blank" rel="noreferrer">Apple’s iPad page</a>.
+        </p>
+        <p class="scroll-reveal">
           My name is Ruslan Akimov. I am a full-time student at Griffith University
           completing a double degree: Bachelor of Engineering (Honours) / Bachelor of
           Data Science (third year). Alongside study, I work as an undergraduate /
@@ -110,89 +117,173 @@
           coordinate with engineers and project managers to help deliver practical,
           compliant engineering outcomes on real projects.
         </p>
-        <p>
-          I was born in Armidale, NSW, and moved to the Gold Coast at a young age,
-          where I attended A.B. Paterson College (Graduated 2023). Mathematics has
-          always drawn me in, which led me toward engineering. I added data science
-          because technology is evolving quickly — it complements engineering and
-          adds a strong analytical toolkit.
-        </p>
-        <p>
-          I enjoy exercise and learning new things. My hobbies include the gym and
-          sports, DJing, and electric guitar. I value empathy and connection, which
-          I believe will matter for networking and the job market.
-        </p>
-        <p>
-          After university, I want to work as a civil engineer on infrastructure,
-          and grow into more senior roles over time. Below is a snapshot of lessons
-          and projects from my studies so far — including work related to
-          <strong>3101ENG Structural Analysis</strong>.
-        </p>
+        <div class="expandable" data-expandable>
+          <button
+            type="button"
+            class="expandable-trigger"
+            aria-expanded="false"
+            aria-controls="about-more"
+            data-expand-trigger
+          >
+            <span class="expandable-label-show">Show full story</span>
+            <span class="expandable-label-hide" hidden>Hide</span>
+          </button>
+          <div class="expandable-frame">
+            <div
+              id="about-more"
+              class="expandable-panel"
+              role="region"
+              aria-hidden="true"
+            >
+              <p>
+                I was born in Armidale, NSW, and moved to the Gold Coast at a young age,
+                where I attended A.B. Paterson College (Graduated 2023). Mathematics has
+                always drawn me in, which led me toward engineering. I added data science
+                because technology is evolving quickly — it complements engineering and
+                adds a strong analytical toolkit.
+              </p>
+              <p>
+                I enjoy exercise and learning new things. My hobbies include the gym and
+                sports, DJing, and electric guitar. I value empathy and connection, which
+                I believe will matter for networking and the job market.
+              </p>
+              <p>
+                After university, I want to work as a civil engineer on infrastructure,
+                and grow into more senior roles over time. Below is a snapshot of lessons
+                and projects from my studies so far — including work related to
+                <strong>3101ENG Structural Analysis</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section class="section container reveal" id="experience">
-        <h2>Experience</h2>
-        <p class="section-intro">
-          Selected roles that combine engineering judgement, communication, and
-          delivery — starting with my current internship.
+      <section class="section container reveal scroll-chapter" id="experience">
+        <p class="chapter-kicker scroll-reveal">Work</p>
+        <h2 class="chapter-title scroll-reveal">Experience</h2>
+        <p class="section-intro scroll-reveal">
+          Tap a role to expand details — selected roles that combine engineering judgement,
+          communication, and delivery.
         </p>
 
-        <article class="card">
-          <h3>Undergraduate Engineer (Internship)</h3>
-          <p class="meta">
-            <a href="https://www.jcengineers.com.au/" target="_blank" rel="noreferrer">JC Engineers</a>
-            · February 2026 – Present · Gold Coast, QLD
-          </p>
-          <p>
-            <a href="https://www.jcengineers.com.au/about" target="_blank" rel="noreferrer">JC Engineers</a>
-            describes itself as a people-focused consultancy delivering coordinated
-            civil, structural, hydraulic, and traffic engineering together with planning
-            and project delivery — supporting projects across <strong>QLD, NSW, and VIC</strong>,
-            including regional communities. The firm promotes clear communication,
-            practical advice, and integrated services that reduce complexity for clients.
-          </p>
-          <p>In my role I:</p>
-          <ul class="list-compact">
-            <li>Assist with <strong>site inspections</strong> and on-site observations.</li>
-            <li>Work with <strong>engineers</strong> and <strong>project managers</strong> to translate site conditions into coordinated engineering responses.</li>
-            <li>Build familiarity with how consultancy teams balance technical standards, approvals context, and commercial timelines.</li>
-          </ul>
+        <article class="card card-disclosure is-open" data-expandable>
+          <button
+            type="button"
+            class="card-disclosure-trigger"
+            aria-expanded="true"
+            aria-controls="exp-jc"
+            data-expand-trigger
+          >
+            <span class="card-disclosure-head">
+              <span class="card-disclosure-title">Undergraduate Engineer (Internship)</span>
+              <span class="card-disclosure-meta"
+                >JC Engineers · Feb 2026 – Present · Gold Coast</span
+              >
+            </span>
+            <span class="card-disclosure-icon" aria-hidden="true"></span>
+          </button>
+          <div class="card-disclosure-frame">
+            <div class="card-disclosure-panel" id="exp-jc" aria-hidden="false">
+              <p class="meta">
+                <a href="https://www.jcengineers.com.au/" target="_blank" rel="noreferrer">JC Engineers</a>
+              </p>
+              <p>
+                <a href="https://www.jcengineers.com.au/about" target="_blank" rel="noreferrer">JC Engineers</a>
+                describes itself as a people-focused consultancy delivering coordinated
+                civil, structural, hydraulic, and traffic engineering together with planning
+                and project delivery — supporting projects across <strong>QLD, NSW, and VIC</strong>,
+                including regional communities. The firm promotes clear communication,
+                practical advice, and integrated services that reduce complexity for clients.
+              </p>
+              <p>In my role I:</p>
+              <ul class="list-compact">
+                <li>Assist with <strong>site inspections</strong> and on-site observations.</li>
+                <li>Work with <strong>engineers</strong> and <strong>project managers</strong> to translate site conditions into coordinated engineering responses.</li>
+                <li>Build familiarity with how consultancy teams balance technical standards, approvals context, and commercial timelines.</li>
+              </ul>
+            </div>
+          </div>
         </article>
 
-        <article class="card">
-          <h3>Griffith Ambassador</h3>
-          <p class="meta">Casual · January 2024 – Present</p>
-          <p>
-            Represent Griffith at schools and on-campus events — engaging students,
-            parents, teachers, and community members with professionalism and clarity.
-          </p>
+        <article class="card card-disclosure" data-expandable>
+          <button
+            type="button"
+            class="card-disclosure-trigger"
+            aria-expanded="false"
+            aria-controls="exp-amb"
+            data-expand-trigger
+          >
+            <span class="card-disclosure-head">
+              <span class="card-disclosure-title">Griffith Ambassador</span>
+              <span class="card-disclosure-meta">Casual · Jan 2024 – Present</span>
+            </span>
+            <span class="card-disclosure-icon" aria-hidden="true"></span>
+          </button>
+          <div class="card-disclosure-frame">
+            <div class="card-disclosure-panel" id="exp-amb" aria-hidden="true">
+              <p>
+                Represent Griffith at schools and on-campus events — engaging students,
+                parents, teachers, and community members with professionalism and clarity.
+              </p>
+            </div>
+          </div>
         </article>
 
-        <article class="card">
-          <h3>Private Tutoring</h3>
-          <p class="meta">Casual · January 2024 – Present</p>
-          <p>
-            One-to-one tutoring (including online delivery during exchange). Focus on
-            explaining concepts clearly, tracking progress, and communicating with
-            families about goals and scheduling.
-          </p>
+        <article class="card card-disclosure" data-expandable>
+          <button
+            type="button"
+            class="card-disclosure-trigger"
+            aria-expanded="false"
+            aria-controls="exp-tut"
+            data-expand-trigger
+          >
+            <span class="card-disclosure-head">
+              <span class="card-disclosure-title">Private Tutoring</span>
+              <span class="card-disclosure-meta">Casual · Jan 2024 – Present</span>
+            </span>
+            <span class="card-disclosure-icon" aria-hidden="true"></span>
+          </button>
+          <div class="card-disclosure-frame">
+            <div class="card-disclosure-panel" id="exp-tut" aria-hidden="true">
+              <p>
+                One-to-one tutoring (including online delivery during exchange). Focus on
+                explaining concepts clearly, tracking progress, and communicating with
+                families about goals and scheduling.
+              </p>
+            </div>
+          </div>
         </article>
 
-        <article class="card">
-          <h3>Noodle Box — Senior (Casual)</h3>
-          <p class="meta">January 2021 – September 2025</p>
-          <p>
-            Hospitality leadership through management transitions: cooking, service,
-            training new staff, and helping maintain operational standards under pressure.
-          </p>
+        <article class="card card-disclosure" data-expandable>
+          <button
+            type="button"
+            class="card-disclosure-trigger"
+            aria-expanded="false"
+            aria-controls="exp-noodle"
+            data-expand-trigger
+          >
+            <span class="card-disclosure-head">
+              <span class="card-disclosure-title">Noodle Box — Senior (Casual)</span>
+              <span class="card-disclosure-meta">Jan 2021 – Sep 2025</span>
+            </span>
+            <span class="card-disclosure-icon" aria-hidden="true"></span>
+          </button>
+          <div class="card-disclosure-frame">
+            <div class="card-disclosure-panel" id="exp-noodle" aria-hidden="true">
+              <p>
+                Hospitality leadership through management transitions: cooking, service,
+                training new staff, and helping maintain operational standards under pressure.
+              </p>
+            </div>
+          </div>
         </article>
       </section>
 
-      <section class="section container reveal" id="education">
-        <h2>Education</h2>
-        <p class="section-intro">
-          Where I study and the pathway I am on — similar in spirit to a classic
-          ePortfolio “Education” section.
+      <section class="section container reveal scroll-chapter" id="education">
+        <p class="chapter-kicker scroll-reveal">Study</p>
+        <h2 class="chapter-title scroll-reveal">Education</h2>
+        <p class="section-intro scroll-reveal">
+          Qualifications, exchange, and honours — scroll to see each block rise into view.
         </p>
         <article class="card">
           <h3>Griffith University</h3>
@@ -226,9 +317,10 @@
         </article>
       </section>
 
-      <section class="section container reveal" id="skills">
-        <h2>Skills</h2>
-        <p class="section-intro">
+      <section class="section container reveal scroll-chapter" id="skills">
+        <p class="chapter-kicker scroll-reveal">Capabilities</p>
+        <h2 class="chapter-title scroll-reveal">Skills</h2>
+        <p class="section-intro scroll-reveal">
           Themes that show up in engineering, data science, and team project work.
         </p>
         <div class="chips" role="list" aria-label="Skill chips">
@@ -243,9 +335,10 @@
         </div>
       </section>
 
-      <section class="section container reveal" id="artefacts">
-        <h2>Portfolio Artefacts</h2>
-        <p class="section-intro">
+      <section class="section container reveal scroll-chapter" id="artefacts">
+        <p class="chapter-kicker scroll-reveal">Evidence</p>
+        <h2 class="chapter-title scroll-reveal">Portfolio artefacts</h2>
+        <p class="section-intro scroll-reveal">
           Two artefacts for your career task. Replace the placeholder links with your
           real files (PDF in the repo, Google Drive, or Griffith submission links).
         </p>
