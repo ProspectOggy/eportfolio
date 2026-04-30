@@ -10,6 +10,8 @@ const emailText = document.getElementById("email-text");
 const toastEl = document.getElementById("toast");
 const scrollCue = document.getElementById("scroll-cue");
 const scrollProgress = document.getElementById("scroll-progress");
+const cursorGlow = document.getElementById("cursor-glow");
+const tiltCards = document.querySelectorAll(".tilt-card");
 
 const HERO_CLIP_START = 15;
 const HERO_CLIP_END = 75;
@@ -132,6 +134,31 @@ if (scrollCue) {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   });
 }
+
+if (cursorGlow) {
+  window.addEventListener("pointermove", (event) => {
+    cursorGlow.style.opacity = "1";
+    cursorGlow.style.left = `${event.clientX}px`;
+    cursorGlow.style.top = `${event.clientY}px`;
+  });
+  window.addEventListener("pointerleave", () => {
+    cursorGlow.style.opacity = "0";
+  });
+}
+
+tiltCards.forEach((card) => {
+  card.addEventListener("pointermove", (event) => {
+    const rect = card.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    const rotateY = ((x / rect.width) - 0.5) * 8;
+    const rotateX = (0.5 - (y / rect.height)) * 8;
+    card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  });
+  card.addEventListener("pointerleave", () => {
+    card.style.transform = "";
+  });
+});
 
 function initExpandables() {
   document.querySelectorAll("[data-expandable]").forEach((root) => {

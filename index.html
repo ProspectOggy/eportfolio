@@ -12,23 +12,13 @@
   </head>
   <body>
     <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
     <header class="hero" id="top">
       <div class="hero-media" aria-hidden="true">
         <div id="hero-yt" class="hero-yt"></div>
         <div class="hero-aurora" id="hero-aurora"></div>
         <div class="hero-scrim"></div>
       </div>
-      <p class="hero-media-credit">
-        Cinematic backdrop: excerpt from
-        <a
-          href="https://www.youtube.com/watch?v=-6CyOPXA_Zc"
-          target="_blank"
-          rel="noreferrer"
-          >YouTube</a
-        >
-        (15s–1:15 loop)
-      </p>
-
       <nav class="nav container">
         <a class="logo" href="#top">Ruslan Akimov</a>
         <div class="nav-links">
@@ -59,38 +49,10 @@
               <a class="button button-ghost" href="#experience">Experience</a>
               <a class="button button-ghost" href="assets/RuslanA_CV.pdf" download>Download CV</a>
             </div>
-          </div>
-
-          <div class="hero-visual hero-entrance hero-entrance-delay" aria-hidden="true">
-            <div class="hero-visual-frame">
-              <svg class="hero-svg" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="rgba(255,255,255,0.35)" />
-                    <stop offset="100%" stop-color="rgba(255,255,255,0.05)" />
-                  </linearGradient>
-                </defs>
-                <rect x="24" y="240" width="272" height="8" rx="4" fill="rgba(255,255,255,0.15)" />
-                <path
-                  class="hero-beam"
-                  d="M40 240 L160 80 L280 240"
-                  fill="none"
-                  stroke="url(#g1)"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                />
-                <path
-                  class="hero-beam hero-beam-2"
-                  d="M70 240 L160 120 L250 240"
-                  fill="none"
-                  stroke="rgba(255,255,255,0.22)"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-                <circle class="hero-node" cx="160" cy="80" r="6" fill="#fff" />
-                <circle class="hero-node hero-node-2" cx="160" cy="120" r="5" fill="#cfe3ff" />
-              </svg>
-              <p class="hero-visual-caption">Structural motif · animated entrance</p>
+            <div class="hero-metrics">
+              <span class="metric-pill">3101ENG · Structural Analysis</span>
+              <span class="metric-pill">GPA 6.7 / 7</span>
+              <span class="metric-pill">Undergraduate Engineer · JC Engineers</span>
             </div>
           </div>
         </div>
@@ -332,6 +294,31 @@
           <span class="chip" role="listitem">Technical communication</span>
           <span class="chip" role="listitem">Team collaboration</span>
           <span class="chip" role="listitem">Self-directed learning</span>
+        </div>
+      </section>
+
+      <section class="section container reveal scroll-chapter" id="engineering-gallery">
+        <p class="chapter-kicker scroll-reveal">Visual Portfolio</p>
+        <h2 class="chapter-title scroll-reveal">Engineering snapshots</h2>
+        <p class="section-intro scroll-reveal">
+          A dynamic showcase style section for key themes in my current work and study.
+        </p>
+        <div class="gallery-grid">
+          <article class="gallery-card tilt-card">
+            <div class="gallery-image gallery-image-1" aria-hidden="true"></div>
+            <h3>Site Inspection Lens</h3>
+            <p>Translating on-site conditions into practical engineering actions.</p>
+          </article>
+          <article class="gallery-card tilt-card">
+            <div class="gallery-image gallery-image-2" aria-hidden="true"></div>
+            <h3>Structural Modelling</h3>
+            <p>Load paths, assumptions, and structural decision-making in coursework.</p>
+          </article>
+          <article class="gallery-card tilt-card">
+            <div class="gallery-image gallery-image-3" aria-hidden="true"></div>
+            <h3>Data-Driven Thinking</h3>
+            <p>Using analytics and coding to support engineering clarity.</p>
+          </article>
         </div>
       </section>
 
