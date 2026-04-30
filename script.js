@@ -12,6 +12,7 @@ const toastEl = document.getElementById("toast");
 const scrollCue = document.getElementById("scroll-cue");
 const scrollProgress = document.getElementById("scroll-progress");
 const tiltCards = document.querySelectorAll(".tilt-card");
+const rotatingWord = document.getElementById("hero-rotating-word");
 
 const HERO_CLIP_START = 15;
 const HERO_CLIP_END = 75;
@@ -119,6 +120,15 @@ if (scrollCue) {
   scrollCue.addEventListener("click", () => {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
   });
+}
+
+if (rotatingWord) {
+  const words = ["Engineering", "Data Science", "Infrastructure"];
+  let idx = 0;
+  window.setInterval(() => {
+    idx = (idx + 1) % words.length;
+    rotatingWord.textContent = words[idx];
+  }, 1800);
 }
 
 tiltCards.forEach((card) => {

@@ -168,20 +168,42 @@ body {
 }
 
 .metric-pill {
-  font-size: 0.8rem;
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  font-size: 0.84rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
   color: rgba(236, 243, 255, 0.95);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.12);
   border-radius: 999px;
-  padding: 0.32rem 0.62rem;
+  padding: 0.38rem 0.72rem;
   backdrop-filter: blur(4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 0.25rem;
+#hero-rotating-word {
+  color: #cfe2ff;
+  position: relative;
+}
+
+#hero-rotating-word::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(207, 226, 255, 0.2), rgba(207, 226, 255, 0.9), rgba(207, 226, 255, 0.2));
+  animation: shimmer-line 2s linear infinite;
+}
+
+@keyframes shimmer-line {
+  from {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
+  }
 }
 
 .hero-entrance {
