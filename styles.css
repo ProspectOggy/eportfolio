@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap");
+
 :root {
   --bg: #f5f7fb;
   --text: #1a2230;
@@ -33,11 +35,16 @@ html {
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: var(--text);
   background: radial-gradient(1200px 600px at 20% 0%, rgba(31, 111, 235, 0.12), transparent 55%),
     var(--bg);
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .container {
@@ -294,7 +301,9 @@ body {
 h1,
 h2,
 h3 {
+  font-family: "Space Grotesk", "Inter", "Segoe UI", sans-serif;
   line-height: 1.2;
+  letter-spacing: 0.2px;
 }
 
 h1 {
