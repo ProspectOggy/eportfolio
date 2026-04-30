@@ -14,7 +14,17 @@
     <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
     <header class="hero" id="top">
       <div class="hero-media" aria-hidden="true">
-        <div id="hero-yt" class="hero-yt"></div>
+        <video
+          id="hero-video"
+          class="hero-video"
+          autoplay
+          muted
+          playsinline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <source src="assets/gold-coast-skyline-hero.mp4" type="video/mp4" />
+        </video>
         <div class="hero-aurora" id="hero-aurora"></div>
         <div class="hero-scrim"></div>
       </div>
