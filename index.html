@@ -315,8 +315,8 @@
         <p class="chapter-kicker scroll-reveal">Evidence</p>
         <h2 class="chapter-title scroll-reveal">Portfolio artefacts</h2>
         <p class="section-intro scroll-reveal">
-          Two artefacts for your career task. Replace the placeholder links with your
-          real files (PDF in the repo, Google Drive, or Griffith submission links).
+          Two artefacts: evidence from coursework and team delivery, each with screenshots
+          and a linked detail page for the full narrative.
         </p>
 
         <div class="folder-grid">
@@ -430,19 +430,99 @@
                   <span class="folder-title">Artefact 2</span>
                 </span>
               </span>
-              <span class="folder-label">Project / Reflection</span>
+              <span class="folder-label">2006ICT · Object-Oriented Software Development</span>
             </button>
             <div class="folder-content">
-              <h3>Artefact 2: Project or reflection</h3>
-              <p class="meta">Skill focus: Teamwork, communication, or critical reflection</p>
-              <p>
-                Choose a second item that complements the first — for example a team
-                deliverable, a lab reflection, or a short write-up of lessons learned.
+              <h3>Artefact 2: Tetris — Object-Oriented Software Development</h3>
+              <p class="meta">
+                2006ICT Object Oriented Software Development · Java 21 · JavaFX · Maven · JUnit 5 · Mockito · Gson
               </p>
               <p>
-                <strong>Evidence link:</strong>
-                <a href="#" target="_blank" rel="noreferrer">Add link to your second artefact</a>
+                For the capstone group assessment in <strong>2006ICT</strong>, my partner Holly Blunt and I
+                (Group 23, Gold Coast campus) delivered a complete JavaFX Tetris application assessed on
+                architecture, design principles, patterns, advanced programming, and testing — not only whether
+                the game ran, but whether it was built well.
               </p>
+              <p>
+                The application supports single-player, two-player, AI, and external-server modes; persists
+                configuration and a top-10 leaderboard via JSON; includes audio with hotkey toggles; scales the
+                play field; and can connect to a separate <code>TetrisServer.jar</code> over TCP for remote moves.
+              </p>
+              <p>
+                <strong>Highlights:</strong> <strong>19/19</strong> JUnit tests passing in the final submission;
+                <strong>four</strong> design patterns formally justified; <strong>four</strong> play modes;
+                about <strong>66 combined team hours</strong> over four weeks.
+              </p>
+              <p>
+                <strong>Project context:</strong> my contribution focused on architecture, design patterns,
+                advanced-programming documentation, and submission assembly; Holly led core game implementation —
+                a split aligned with strengths while keeping a shared GitHub workflow and meeting discipline.
+              </p>
+              <ul class="list-compact">
+                <li>Clean MVC separation — game rules in <code>org.example.game</code> with no JavaFX coupling</li>
+                <li>Formal SOLID, GRASP, and pattern evidence with code references</li>
+                <li>JUnit 5 with parameterised tests, mocks, and test doubles (stub/spy)</li>
+              </ul>
+              <p>
+                <strong>Full artefact page:</strong>
+                <a href="assets/artefact-tetris.html" target="_blank" rel="noreferrer">
+                  Open Tetris artefact details
+                </a>
+              </p>
+              <div class="artefact-gallery artefact-gallery--contain" data-gallery>
+                <figure class="artefact-gallery-main">
+                  <img
+                    id="artefact2-main-image"
+                    src="assets/tetris-figure1.png"
+                    alt="JavaFX Tetris gameplay and interface screenshot."
+                  />
+                  <figcaption id="artefact2-caption">
+                    Figure 1 — JavaFX Tetris gameplay and interface elements from the delivered application.
+                  </figcaption>
+                </figure>
+                <div class="artefact-gallery-thumbs" role="tablist" aria-label="Artefact 2 screenshots">
+                  <button
+                    class="artefact-thumb is-active"
+                    type="button"
+                    data-image="assets/tetris-figure1.png"
+                    data-caption="Figure 1 — JavaFX Tetris gameplay and interface elements from the delivered application."
+                    data-alt="JavaFX Tetris gameplay and interface screenshot."
+                    aria-label="Show Tetris gameplay screenshot"
+                  >
+                    Gameplay UI
+                  </button>
+                  <button
+                    class="artefact-thumb"
+                    type="button"
+                    data-image="assets/tetris-figure2.png"
+                    data-caption="Figure 2 — MVC-oriented structure supporting human, AI, and network-driven control without changing core game rules."
+                    data-alt="Architecture or MVC documentation excerpt for Tetris project."
+                    aria-label="Show architecture diagram screenshot"
+                  >
+                    MVC / structure
+                  </button>
+                  <button
+                    class="artefact-thumb"
+                    type="button"
+                    data-image="assets/tetris-figure3.png"
+                    data-caption="Figure 3 — Features spanning modes, persistence, audio, scaling, and optional TCP server play."
+                    data-alt="Tetris project features or modes documentation screenshot."
+                    aria-label="Show modes or features screenshot"
+                  >
+                    Modes &amp; features
+                  </button>
+                  <button
+                    class="artefact-thumb"
+                    type="button"
+                    data-image="assets/tetris-figure4.png"
+                    data-caption="Figure 4 — Testing evidence with JUnit 5, mocks, and parameterisation aligned to the rubric."
+                    data-alt="JUnit testing or quality evidence screenshot for Tetris project."
+                    aria-label="Show testing evidence screenshot"
+                  >
+                    Testing
+                  </button>
+                </div>
+              </div>
             </div>
           </article>
         </div>

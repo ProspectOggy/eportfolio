@@ -783,6 +783,13 @@ h1 {
   background: color-mix(in srgb, var(--surface) 84%, #0000);
 }
 
+.artefact-gallery--contain .artefact-gallery-main img {
+  object-fit: contain;
+  object-position: center center;
+  max-height: 420px;
+  background: color-mix(in srgb, var(--surface) 92%, #0f172a 8%);
+}
+
 .artefact-gallery-main figcaption {
   margin-top: 0.55rem;
   color: var(--muted);
