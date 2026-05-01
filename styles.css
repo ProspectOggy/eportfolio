@@ -10,7 +10,7 @@
   --border: #d8e1ef;
   --shadow: 0 12px 30px rgba(16, 39, 71, 0.08);
   --radius: 16px;
-  --nav-link: #dbe8ff;
+  --nav-link: #1d2b45;
   --hero-scrim-top: rgba(6, 12, 28, 0.12);
   --hero-scrim-bottom: rgba(6, 12, 28, 0.46);
 }
@@ -125,10 +125,11 @@ p {
 }
 
 .logo {
-  color: #fff;
+  color: #14233f;
   text-decoration: none;
   font-weight: 700;
   letter-spacing: 0.3px;
+  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.45);
 }
 
 .nav-links a {
@@ -145,8 +146,8 @@ p {
 }
 
 .nav-links a.active {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.14);
+  color: #0f203d;
+  background: rgba(255, 255, 255, 0.28);
 }
 
 .hero-layout {
@@ -264,13 +265,14 @@ p {
 
 .theme-toggle {
   margin-left: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  background: transparent;
-  color: #ffffff;
+  border: 1px solid rgba(15, 32, 61, 0.42);
+  background: rgba(255, 255, 255, 0.2);
+  color: #122443;
   border-radius: 999px;
   padding: 0.4rem 0.8rem;
   cursor: pointer;
   transition: transform 0.15s ease, background-color 0.2s ease;
+  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.35);
 }
 
 .theme-toggle:hover {
