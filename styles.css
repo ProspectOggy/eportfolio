@@ -11,8 +11,8 @@
   --shadow: 0 12px 30px rgba(16, 39, 71, 0.08);
   --radius: 16px;
   --nav-link: #dbe8ff;
-  --hero-scrim-top: rgba(6, 12, 28, 0.24);
-  --hero-scrim-bottom: rgba(6, 12, 28, 0.66);
+  --hero-scrim-top: rgba(6, 12, 28, 0.12);
+  --hero-scrim-bottom: rgba(6, 12, 28, 0.46);
 }
 
 [data-theme="dark"] {
@@ -79,10 +79,11 @@ p {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  filter: brightness(1.12) contrast(1.08) saturate(1.06);
 }
 
 .hero--video-ready .hero-aurora.is-dim {
-  opacity: 0.1;
+  opacity: 0.03;
 }
 
 .hero-aurora {
@@ -159,6 +160,7 @@ p {
 
 .hero-copy {
   min-width: 0;
+  text-shadow: 0 3px 18px rgba(4, 10, 24, 0.42);
 }
 
 .hero-metrics {
@@ -740,7 +742,7 @@ h1 {
 }
 
 .folder-card.is-open .folder-content {
-  max-height: 420px;
+  max-height: 1700px;
 }
 
 .folder-card.is-open .folder-layer-1 {
@@ -995,12 +997,12 @@ a:hover {
 
 @media (max-width: 720px) {
   :root {
-    --hero-scrim-top: rgba(6, 12, 28, 0.36);
-    --hero-scrim-bottom: rgba(6, 12, 28, 0.78);
+    --hero-scrim-top: rgba(6, 12, 28, 0.24);
+    --hero-scrim-bottom: rgba(6, 12, 28, 0.62);
   }
 
   .hero--video-ready .hero-aurora.is-dim {
-    opacity: 0.08;
+    opacity: 0.02;
   }
 
   .hero-layout {
