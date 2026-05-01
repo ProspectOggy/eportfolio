@@ -133,7 +133,7 @@ p {
 }
 
 .nav-links a {
-  color: var(--nav-link);
+  color: #0f203d;
   text-decoration: none;
   margin-left: 1rem;
   padding: 0.35rem 0.6rem;
