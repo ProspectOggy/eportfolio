@@ -784,7 +784,10 @@ h1 {
 }
 
 .folder-card.is-open .folder-content {
-  max-height: 4200px;
+  min-height: 0;
+  max-height: none;
+  overflow: visible;
+  padding-bottom: 1.5rem;
 }
 
 .folder-card.is-open .folder-layer-1 {
